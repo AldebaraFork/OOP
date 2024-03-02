@@ -34,6 +34,7 @@ namespace Exercicio1OOP
 
     internal class Funcionarios
     {
+        //o que tiver aqui dentro é atributo
         public string NomeFuncionario1;
         public string NomeFuncionario2;
 
