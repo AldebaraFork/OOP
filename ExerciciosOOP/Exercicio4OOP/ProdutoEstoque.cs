@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -19,7 +20,7 @@ namespace Exercicio4OOP
             Console.WriteLine("Digite a quantidade do produto: ");
             Produto.QuantidadeProduto = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Dados do produto: {Produto.NomeProduto} , R$ {Produto.PrecoProduto} , {Produto.QuantidadeProduto} unidades, Total: R$ {Produto.ToString(Produto.ValorTotalEmEstoque)} ");
+            Console.WriteLine($"Dados do produto:" + Produto);
 
             Console.WriteLine("Digite o numero de produtos a ser adicionado ao estoque: ");
             Produto.ProdutosAdicionados = int.Parse(Console.ReadLine());
@@ -47,12 +48,18 @@ namespace Exercicio4OOP
         public int QuantidadeProduto;
         public int ProdutosAdicionados;
         public int ProdutosRemovidos;
-
+       
 
         public double ValorTotalEmEstoque()
         {
           return PrecoProduto * QuantidadeProduto;
         }
 
+
+        //bom de usar quando voce precisa repetir muitas vezes 
+        public override string ToString()
+        {
+            return "Nome do Produto inserido:" + NomeProduto + ", No valor de R$:" + PrecoProduto + "cada ,quantidade de produtos em estoque " + QuantidadeProduto + ", No Valor Total de R$:" +ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
+        }
     }
 }
