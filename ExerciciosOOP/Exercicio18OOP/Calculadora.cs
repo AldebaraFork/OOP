@@ -33,7 +33,7 @@ namespace Exercicio18OOP
                     break;
                 case 2:
                     Console.WriteLine("Voce selecionou  a operaçao subtração ");
-                    Console.WriteLine("Digite o primeiro numero: ");
+                    Console.Write("Digite o primeiro numero: ");
                     double Sub1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     Console.Write("Digite o segundo numero: ");
                     double Sub2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
