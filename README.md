@@ -12,3 +12,6 @@ Farei uma pausa temporária dos exercicios de OOP, focarei num repositorio novo 
 
 # OOP 14/03/2024 
 atualizações diarias estão de volta
+
+# OOP 07/03/2024
+após um mes, continuidade dos exercicios de orientação a objetos
