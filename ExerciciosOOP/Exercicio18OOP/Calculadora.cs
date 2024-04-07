@@ -16,11 +16,13 @@ namespace Exercicio18OOP
 
         public Calculadora()
         {
+            //primeira operação 
             Console.WriteLine("Digite o numero da Operação ");
             Console.WriteLine("1 - Adição");
             Console.WriteLine("2 - Subtraçao");
             Console.WriteLine("3 - Multiplicar ");
             Console.WriteLine("4 - Divisão");
+            Console.WriteLine("5 - Resto de Divisão");
             double OperacaoSelecionada = double.Parse(Console.ReadLine());
             switch (OperacaoSelecionada)
             {
@@ -41,7 +43,7 @@ namespace Exercicio18OOP
                     Console.Write("Digite o segundo numero: ");
                     double Sub2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     double subtracao = Sub1 - Sub2;
-                    Console.Write("O resultado da subratraço é: " + subtracao.ToString(CultureInfo.InvariantCulture));
+                    Console.WriteLine("O resultado da subratraço: " + subtracao.ToString(CultureInfo.InvariantCulture));
                     break;
                 case 3:
                     Console.WriteLine("Voce selecionou a operação de multiplicação");
@@ -50,7 +52,7 @@ namespace Exercicio18OOP
                     Console.Write("Digite o segundo numero: ");
                     double Multi2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     double Multiplicacao = Multi1 * Multi2;
-                    Console.Write("O resultado da multiplicação é: " + Multiplicacao.ToString(CultureInfo.InvariantCulture));
+                    Console.WriteLine("O resultado da multiplicação é: " + Multiplicacao.ToString(CultureInfo.InvariantCulture));
                     break;
                 case 4:
                     Console.WriteLine("Voce selecionou a operação de Divisão, Cuidado pois 0 não é divisivel");
@@ -72,12 +74,24 @@ namespace Exercicio18OOP
                         Console.WriteLine("O resultado da divisão é: " + Divisao.ToString(CultureInfo.InvariantCulture));
                     }
                     break;
+                case 5:
+                    Console.WriteLine("Você selecionou a operação de Resto de Divisão ");
+                    Console.Write("Digite o primeiro numero: ");
+                    double Rest1 = double.Parse(Console.ReadLine());
+                    Console.Write("Digite o segundo numero:");
+                    double Rest2 = double.Parse(Console.ReadLine());
+                    double Resto1 = Rest1 % Rest2;
+                    Console.WriteLine("O resto da divisão é: " + Resto1.ToString(CultureInfo.InvariantCulture));
+                    break;
+
                 default:
-                    Console.WriteLine("Selecione uma operação acima! ");
+                    Console.WriteLine("Opção invalida, Selecione uma das opções acima! ");
                     break;
             }
+
+            //segunda operação 
             string AdicionarOperacao;
-            Console.WriteLine("Deseja calcular a operação anterior com mais uma? ");
+            Console.WriteLine("Deseja calcular mais uma operação?");
             Console.WriteLine("Digite SIM ou NÂO ");
             AdicionarOperacao = Console.ReadLine();
             if (AdicionarOperacao == "SIM" || AdicionarOperacao == "sim")
@@ -87,6 +101,7 @@ namespace Exercicio18OOP
                 Console.WriteLine("2 - Subtraçao");
                 Console.WriteLine("3 - Multiplicar ");
                 Console.WriteLine("4 - Divisão");
+                Console.WriteLine("5 - Resto de divisão");
                 double OperacaoSelecionada2 = double.Parse(Console.ReadLine());
                 switch (OperacaoSelecionada2)
                 {
@@ -128,16 +143,26 @@ namespace Exercicio18OOP
                         if (Div1 == 0)
                         {
                             throw new DivideByZeroException("Não é possível dividir por zero.");
-                        }else if(Div2 == 0)
+                        }
+                        else if (Div2 == 0)
                         {
                             throw new DivideByZeroException("Não é possível dividir por zero.");
                         }
                         else
                         {
-                            Console.WriteLine("O resultado da divisão é: " + Divi);                        }
+                            Console.WriteLine("O resultado da divisão é: " + Divi);
+                        }
+                        break;
+                    case 5:
+                        Console.WriteLine("Você selecionou a operação de Resto de Divisão ");
+                        Console.Write("Digite o primeiro numero: ");
+                        double Res1 = double.Parse(Console.ReadLine());
+                        Console.Write("Digite o segundo numero:");
+                        double Res2 = double.Parse(Console.ReadLine());
+                        double Resto = Res1 % Res2;
+                        Console.WriteLine("O resto da divisão é: " + Resto.ToString(CultureInfo.InvariantCulture));
                         break;
                 }
-
             }
             else if (AdicionarOperacao == "NAO" || AdicionarOperacao == "nao")
             {
@@ -149,8 +174,40 @@ namespace Exercicio18OOP
             }
 
 
+            //fatorial 
+
+            Console.WriteLine("Voce Deseja Calcular fatorial? ");
+            string SelecaoFatorial = Console.ReadLine();
+            if (SelecaoFatorial == "SIM" || SelecaoFatorial == "sim" || SelecaoFatorial == "s" || SelecaoFatorial == "Sim")
+            {
+                Console.WriteLine("Informe um numero inteiro positivo: ");
+                double numero = double.Parse(Console.ReadLine());
+                double resultado = 1;
+                while (numero != 1)
+                {
+                    resultado = resultado * numero;
+                    numero = numero - 1;
+                }
+                Console.WriteLine("Fatorial de " + numero + " é " + resultado);
+               
+            }
+            else if (SelecaoFatorial == "NAO" || SelecaoFatorial == "nao" || SelecaoFatorial == "nao" || SelecaoFatorial == "Nao")
+            {
+                Console.WriteLine("Pressione qualquer botao para encerrar ");
+            }
+            else
+            {
+                Console.WriteLine("Opção invalida");
+            }
+
 
         }
+
+
+
+
+
     }
+
 
 }
