@@ -304,11 +304,11 @@ namespace Exercicio18OOP
 
                         if (Mediana >= MediaAprovacao)
                         {
-                            Console.WriteLine("Parabens! você foi aprovado com a média: " + Mediana.ToString(CultureInfo.InvariantCulture));
+                            Console.WriteLine("Parabens! você foi aprovado com a média: " + Mediana,"F2".ToString(CultureInfo.InvariantCulture));
                         }
                         else if (Mediana <= MediaAprovacao)
                         {
-                            Console.WriteLine("Infelizmente você foi reprovado com a média: " + Mediana.ToString(CultureInfo.InvariantCulture));
+                            Console.WriteLine("Infelizmente você foi reprovado com a média: " + Mediana,"F2".ToString(CultureInfo.InvariantCulture));
                         }
                         break;
                     case 4:
@@ -323,13 +323,14 @@ namespace Exercicio18OOP
                         double MEDI = (Nota6 + Nota7 + Nota8 + Nota9) / 4;
                         if (MEDI >= MediaAprovacao)
                         {
-                            Console.WriteLine("Parabens! você foi aprovado com a média: " + MEDI.ToString(CultureInfo.InvariantCulture));
+                            Console.WriteLine("Parabens! você foi aprovado com a média: " + MEDI,"F2".ToString(CultureInfo.InvariantCulture));
                         }
                         else if (MEDI <= MediaAprovacao)
                         {
-                            Console.WriteLine("Infelizmente você foi reprovado com a média: " + MEDI.ToString(CultureInfo.InvariantCulture));
+                            Console.WriteLine("Infelizmente você foi reprovado com a média: " + MEDI,"F2".ToString(CultureInfo.InvariantCulture));
                         }
                         break;
+                       
                 }
             }
             else if (OperacaoNota == "Nao" || OperacaoNota == "NAO" || OperacaoNota == "nao" || OperacaoNota == "n")
