@@ -5,10 +5,11 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Exercicio18OOP
 {
-    internal class Calculadora
+    public class Calculadora
     {
         double OperacaoSelecionada;
         double OperacaoSelecionada2;
@@ -166,21 +167,21 @@ namespace Exercicio18OOP
             }
             else if (AdicionarOperacao == "NAO" || AdicionarOperacao == "nao")
             {
-                Console.WriteLine("Aperte qualquer tecla para encerrar");
+                Console.WriteLine("Aperte qualquer tecla para continuar");
+
             }
             else
             {
                 Console.WriteLine("Opção inválida ");
             }
-
-
-            //fatorial 
-
+        }
+        public void Fatorial()
+        {
             Console.WriteLine("Voce Deseja Calcular fatorial? ");
             string SelecaoFatorial = Console.ReadLine();
             if (SelecaoFatorial == "SIM" || SelecaoFatorial == "sim" || SelecaoFatorial == "s" || SelecaoFatorial == "Sim")
             {
-                Console.WriteLine("Informe um numero inteiro positivo: ");
+                Console.Write("Informe um numero inteiro positivo: ");
                 double numero = double.Parse(Console.ReadLine());
                 double resultado = 1;
                 while (numero != 1)
@@ -189,25 +190,158 @@ namespace Exercicio18OOP
                     numero = numero - 1;
                 }
                 Console.WriteLine("Fatorial de " + numero + " é " + resultado);
-               
+
             }
             else if (SelecaoFatorial == "NAO" || SelecaoFatorial == "nao" || SelecaoFatorial == "nao" || SelecaoFatorial == "Nao")
             {
-                Console.WriteLine("Pressione qualquer botao para encerrar ");
+                Console.WriteLine("Pressione qualquer tecla para continuar");
+
             }
             else
             {
                 Console.WriteLine("Opção invalida");
             }
-
-
         }
 
 
 
+        //MDC (Maximo Divisor Comum)
+        public void MDC()
+        {
+            Console.WriteLine("Deseja calcular MDC? (Maximo Divisor Comum)");
+            string OperacaoMDC = Console.ReadLine();
 
+            if (OperacaoMDC == "SIM" || OperacaoMDC == "sim" || OperacaoMDC == "Sim" || OperacaoMDC == "s")
+            {
+                Console.Write("Insira um numero inteiro: ");
+                int Mda1 = int.Parse(Console.ReadLine());
+                Console.Write("Insira mais um numero inteiro: ");
+                int Mda2 = int.Parse(Console.ReadLine());
+
+                if (Mda2 == 0)
+                {
+                    Console.WriteLine("O divisor não pode ser zero. Tente novamente.");
+                    return;
+                }
+
+                if (Mda1 == Mda2)
+                {
+                    Console.WriteLine("O MDC dos números " + Mda1 + " e " + Mda2 + " é " + Mda1);
+                    return;
+                }
+
+                if (Mda1 == 1 || Mda2 == 1)
+                {
+                    Console.WriteLine("O MDC dos números " + Mda1 + " e " + Mda2 + " é 1");
+                    return;
+                }
+
+                int RestoMDC = Mda1 % Mda2;
+
+                while (RestoMDC != 0)
+                {
+                    Mda1 = Mda2;
+                    Mda2 = RestoMDC;
+                    RestoMDC = Mda1 % Mda2;
+                }
+
+                Console.WriteLine("O MDC dos números " + Mda1 + " e " + Mda2 + " é " + Mda1);
+            }
+            else if (OperacaoMDC == "NAO" || OperacaoMDC == "nao" || OperacaoMDC == "Nao" || OperacaoMDC == "n")
+            {
+                Console.WriteLine("Presione qualquer tecla para continuar ");
+            }
+            else
+            {
+                Console.WriteLine("Operação invalida ");
+            }
+        }
+
+
+
+        //calcular nota
+
+        public void CalculadoraNota()
+        {
+            Console.WriteLine("Deseja Calcular uma Nota? ");
+            string OperacaoNota = Console.ReadLine();
+            if (OperacaoNota == "SIM" || OperacaoNota == "sim" || OperacaoNota == "Sim" || OperacaoNota == "s")
+            {
+                Console.WriteLine("Qual a Média necessaria para aprovação?  ");
+                double MediaAprovacao = double.Parse(Console.ReadLine());
+                Console.WriteLine("Quantas notas foram usadas? ");
+                int NotasUsadas = int.Parse(Console.ReadLine());
+
+                switch (NotasUsadas)
+                {
+                    case 1:
+                        Console.WriteLine("Nao é possivel calcular uma Media com apenas uma nota! ");
+                        break;
+                    case 2:
+                        Console.Write("Digite a primeira nota: ");
+                        double Nota1 = double.Parse(Console.ReadLine());
+                        Console.Write("Digite a segunda nota: ");
+                        double Nota2 = double.Parse(Console.ReadLine());
+                        double Median = (Nota1 + Nota2) / 2;
+
+                        if (Median >= MediaAprovacao)
+                        {
+                            Console.WriteLine("Parabens! você foi aprovado com a média: " + Median.ToString(CultureInfo.InvariantCulture));
+                        }
+                        else if (Median < MediaAprovacao)
+                        {
+                            Console.WriteLine("Infelizmente você foi reprovado com a média: " + Median.ToString(CultureInfo.InvariantCulture));
+                        }
+                        break;
+                    case 3:
+                        Console.Write("Digite a primeira nota: ");
+                        double Nota3 = double.Parse(Console.ReadLine());
+                        Console.Write("Digite a segunda nota: ");
+                        double Nota4 = double.Parse(Console.ReadLine());
+                        Console.Write("Digite a terceira nota: ");
+                        double Nota5 = double.Parse(Console.ReadLine());
+                        double Mediana = (Nota3 + Nota4 + Nota5) / 3;
+
+                        if (Mediana >= MediaAprovacao)
+                        {
+                            Console.WriteLine("Parabens! você foi aprovado com a média: " + Mediana.ToString(CultureInfo.InvariantCulture));
+                        }
+                        else if (Mediana <= MediaAprovacao)
+                        {
+                            Console.WriteLine("Infelizmente você foi reprovado com a média: " + Mediana.ToString(CultureInfo.InvariantCulture));
+                        }
+                        break;
+                    case 4:
+                        Console.Write("Digite a primeira nota: ");
+                        double Nota6 = double.Parse(Console.ReadLine());
+                        Console.Write("Digite a segunda nota: ");
+                        double Nota7 = double.Parse(Console.ReadLine());
+                        Console.Write("Digite a terceira nota: ");
+                        double Nota8 = double.Parse(Console.ReadLine());
+                        Console.Write("Digite a quarta nota: ");
+                        double Nota9 = double.Parse(Console.ReadLine());
+                        double MEDI = (Nota6 + Nota7 + Nota8 + Nota9) / 4;
+                        if (MEDI >= MediaAprovacao)
+                        {
+                            Console.WriteLine("Parabens! você foi aprovado com a média: " + MEDI.ToString(CultureInfo.InvariantCulture));
+                        }
+                        else if (MEDI <= MediaAprovacao)
+                        {
+                            Console.WriteLine("Infelizmente você foi reprovado com a média: " + MEDI.ToString(CultureInfo.InvariantCulture));
+                        }
+                        break;
+                }
+            }
+            else if (OperacaoNota == "Nao" || OperacaoNota == "NAO" || OperacaoNota == "nao" || OperacaoNota == "n")
+            {
+                Console.WriteLine("Pressione qualquer tecla para continuar ");
+
+            }
+            else
+            {
+                Console.WriteLine("Operação inválida! ");
+            }
+        }
 
     }
-
-
 }
