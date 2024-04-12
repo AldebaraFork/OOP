@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace Exercicio19OOP
     {
         public void Teste()
         {
-            string frase = "  I become death, The destroyer of worlds  ";
+           string frase = "  I become death, The destroyer of worlds  ";
 
 
             //para tamanho se usa o length
@@ -57,7 +58,46 @@ namespace Exercicio19OOP
             //Replace recebe 2 caracteres e substitui um caracter na string quando esta sendo feito a operação
             //literalmente troca algo na string por outra coisa
             string recoloca = frase.Replace("worlds" , "bitches");
-            Console.WriteLine(recoloca);
+            Console.WriteLine(recoloca);]
+
+
+            
+        }
+        public void Buscas()
+        {
+
+            string Frase = "Eu sou Aatrox, o destruidor de mundos e seu mundo nâo sera poupado";
+          
+            
+            //IndexOf (string) ou (char) 
+            //retorna o Pedaço do indice que encontrar 
+            var Indexo = Frase.IndexOf("mundos");
+            Console.WriteLine(Indexo);
+
+
+
+            //LastIndexOf (string) ou (char) 
+            //retorna o ULTIMO indice 
+            var UltimoIndexo = Frase.LastIndexOf("Mundos");
+            Console.WriteLine(UltimoIndexo);
+
+
+            //StartsWith (String) ou (char) 
+            //verifica se COMEÇA com um indice e retorna um valor bool (verdadeiro ou falso)
+            var ComecaCom = Frase.StartsWith("E");
+            if (ComecaCom == true)
+            {
+                Console.Write("Ele de fato é o destruidor de mundos");
+            }
+            else
+            {
+                Console.WriteLine("ele nao é o devorador de mundos");
+            }
+
+            //Contains(String) ou (Char) 
+            //usado para procurar um indice que voce nao sabe se esta maiusculo ou minusculo
+            var destruidorRandom = Frase.Contains("destruidor", StringComparison.OrdinalIgnoreCase);
+            var destruidorExact = Frase.Contains("Destruidor");
         }
     }
 }
