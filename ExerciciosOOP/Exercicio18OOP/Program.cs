@@ -7,11 +7,9 @@
             Calculadora calc = new Calculadora();
             calc.Fatorial();
             calc.MDC();
+
             calc.CalculadoraNota();
-
-           
-
-           
+       
         }
     }
 }

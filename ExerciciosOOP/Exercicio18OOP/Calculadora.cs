@@ -27,34 +27,192 @@ namespace Exercicio18OOP
             double OperacaoSelecionada = double.Parse(Console.ReadLine());
             switch (OperacaoSelecionada)
             {
+                //ADIÇÃO
                 case 1:
+                    
                     Console.WriteLine("Voce selecionou a operação adição");
-                    Console.Write("Digite o primeiro numero: ");
-                    double Adicao1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                    Console.Write("Digite o segundo numero: ");
-                    double Adicao2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-                    double Soma = Adicao1 + Adicao2;
-                    Console.WriteLine("O resultado da soma é: " + Soma.ToString(CultureInfo.InvariantCulture));
+                    Console.WriteLine("Quantos numeros voce deseja somar? de 2 até 5");
+                    int QuantidadeSoma = int.Parse(Console.ReadLine());
+                    switch (QuantidadeSoma)
+                    {
+                        case 2:
+                            Console.WriteLine("Voce selecionou 2 numeros! ");
+                            Console.Write("Digite o primeiro numero: ");
+                            double Soma1 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o segundo numero: ");
+                            double Soma2 = double.Parse(Console.ReadLine());
+                            double Resultado1 = Soma1 + Soma2;
+                            Console.WriteLine("O resultado de " + Soma1 + " e " + Soma2 + " é : " + Resultado1.ToString(CultureInfo.InvariantCulture));
+                            break;
+                        case 3:
+                            Console.WriteLine("Voce selecionou 3 numeros! ");
+                            Console.Write("Digite o primeiro numero: ");
+                            double Soma3 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o segundo numero: ");
+                            double Soma4 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o terceiro numero: ");
+                            double Soma5 = double.Parse(Console.ReadLine());
+                            double Resultado2 = Soma3 + Soma4 + Soma5;
+                            Console.WriteLine("O resultado de " + Soma3 + " + " + Soma4 + " + " + Soma5 + " é: " + Resultado2.ToString(CultureInfo.InvariantCulture));
+                            break;
+                        case 4:
+                            Console.WriteLine("Voce selecionou 4 numeros! ");
+                            Console.Write("Digite o primeiro numero: ");
+                            double Soma6 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o segundo numero: ");
+                            double Soma7 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o terceiro numero: ");
+                            double Soma8 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o quarto numero: ");
+                            double Soma9 = double.Parse(Console.ReadLine());
+                            double Resultado3 = Soma6 + Soma7 + Soma8 + Soma9;
+                            Console.WriteLine("O resultado de " + Soma6 + " + " + Soma7 + " + " + Soma8 + " + " + Soma9 + " é: " + Resultado3.ToString(CultureInfo.InvariantCulture));
+                            break;
+                        case 5:
+                            Console.WriteLine("Voce selecionou 5 numeros! ");
+                            Console.Write("Digite o primero numero: ");
+                            double Soma10 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o segundo numero: ");
+                            double Soma11 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o terceiro numero: ");
+                            double Soma12 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o quarto numero: ");
+                            double Soma13 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o quinto numero: ");
+                            double Soma14 = double.Parse(Console.ReadLine());
+                            double Resultado4 = Soma10 + Soma11 + Soma12 + Soma13 + Soma14;
+                            Console.WriteLine("O resultado de " + Soma10 + " + " + Soma11 + " + " + Soma12 + " + " + Soma13 + " + " + Soma14 + " é: " + Resultado4.ToString(CultureInfo.InvariantCulture));
+                            break;
+                        default:
+                            Console.WriteLine("Numero invalido");
+                            break;
+                    }
                     break;
+
+                //SUBTRAÇÃO
                 case 2:
                     Console.WriteLine("Voce selecionou  a operaçao subtração ");
-                    Console.Write("Digite o primeiro numero: ");
-                    double Sub1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                    Console.Write("Digite o segundo numero: ");
-                    double Sub2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                    double subtracao = Sub1 - Sub2;
-                    Console.WriteLine("O resultado da subratraço: " + subtracao.ToString(CultureInfo.InvariantCulture));
+                    Console.WriteLine("Quantos numeros voce deseja subtrair? de 2 ate 5! ");
+                    int QuantidadeSubtracao = int.Parse(Console.ReadLine());
+                    switch (QuantidadeSubtracao)
+                    {
+                        case 2:
+                            Console.WriteLine("Voce selecionou 2 numeros! ");
+                            Console.Write("Digite o primeiro numero: ");
+                            double Sub1 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o segundo numero: ");
+                            double Sub2 = double.Parse(Console.ReadLine());
+                            double ResSub1 = Sub1 - Sub2;
+                            Console.WriteLine("O resultado de " + Sub1 + " e " + Sub2 + " é : " + ResSub1.ToString(CultureInfo.InvariantCulture));
+                            break;
+                        case 3:
+                            Console.WriteLine("Voce selecionou 3 numeros! ");
+                            Console.Write("Digite o primeiro numero: ");
+                            double Sub3 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o segundo numero: ");
+                            double Sub4 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o terceiro numero: ");
+                            double Sub5 = double.Parse(Console.ReadLine());
+                            double ResSub2 = Sub3 - Sub4 - Sub5;
+                            Console.WriteLine("O resultado de " + Sub3 + " + " + Sub4 + " + " + Sub5 + " é: " + ResSub2.ToString(CultureInfo.InvariantCulture));
+                            break;
+                        case 4:
+                            Console.WriteLine("Voce selecionou 4 numeros! ");
+                            Console.Write("Digite o primeiro numero: ");
+                            double Sub6 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o segundo numero: ");
+                            double Sub7 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o terceiro numero: ");
+                            double Sub8 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o quarto numero: ");
+                            double Sub9 = double.Parse(Console.ReadLine());
+                            double ResSub3 = Sub6 - Sub7 - Sub8 - Sub9;
+                            Console.WriteLine("O resultado de " + Sub6 + " - " + Sub7 + " - " + Sub8 + " - " + Sub9 + " é: " + ResSub3.ToString(CultureInfo.InvariantCulture));
+                            break;
+                        case 5:
+                            Console.WriteLine("Voce selecionou 5 numeros! ");
+                            Console.Write("Digite o primero numero: ");
+                            double Sub10 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o segundo numero: ");
+                            double Sub11 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o terceiro numero: ");
+                            double Sub12 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o quarto numero: ");
+                            double Sub13 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o quinto numero: ");
+                            double Sub14 = double.Parse(Console.ReadLine());
+                            double ResSub4 = Sub10 - Sub11 - Sub12 - Sub13 - Sub14;
+                            Console.WriteLine("O resultado de " + Sub10 + " - " + Sub11 + " - " + Sub12 + " - " + Sub13 + " - " + Sub14 + " é: " + ResSub4.ToString(CultureInfo.InvariantCulture));
+                            break;
+                        default:
+                            Console.WriteLine("Numero invalido");
+                            break;
+                    }
                     break;
+
+
+                //MULTIPLICAÇÃO
                 case 3:
-                    Console.WriteLine("Voce selecionou a operação de multiplicação");
-                    Console.Write("Digite o primeiro numero: ");
-                    double Multi1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                    Console.Write("Digite o segundo numero: ");
-                    double Multi2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                    double Multiplicacao = Multi1 * Multi2;
-                    Console.WriteLine("O resultado da multiplicação é: " + Multiplicacao.ToString(CultureInfo.InvariantCulture));
+                    Console.WriteLine("Voce selecionou  a operaçao subtração ");
+                    Console.WriteLine("Quantos numeros voce deseja multiplicar? de 2 ate 5! ");
+                    int QuantidadeMulti = int.Parse(Console.ReadLine());
+                    switch (QuantidadeMulti)
+                    {
+                        case 2:
+                            Console.WriteLine("Voce selecionou 2 numeros! ");
+                            Console.Write("Digite o primeiro numero: ");
+                            double Mult1 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o segundo numero: ");
+                            double Mult2 = double.Parse(Console.ReadLine());
+                            double ResMult1 = Mult1 * Mult2;
+                            Console.WriteLine("O resultado de " + Mult1 + " e " + Mult2 + " é : " + ResMult1.ToString(CultureInfo.InvariantCulture));
+                            break;
+                        case 3:
+                            Console.WriteLine("Voce selecionou 3 numeros! ");
+                            Console.Write("Digite o primeiro numero: ");
+                            double Mult3 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o segundo numero: ");
+                            double Mult4 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o terceiro numero: ");
+                            double Mult5 = double.Parse(Console.ReadLine());
+                            double ResMult2 = Mult3 * Mult4 * Mult5;
+                            Console.WriteLine("O resultado de " + Mult3 + " * " + Mult4 + " * " + Mult5 + " é: " + ResMult2.ToString(CultureInfo.InvariantCulture));
+                            break;
+                        case 4:
+                            Console.WriteLine("Voce selecionou 4 numeros! ");
+                            Console.Write("Digite o primeiro numero: ");
+                            double Mult6 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o segundo numero: ");
+                            double Mult7 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o terceiro numero: ");
+                            double Mult8 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o quarto numero: ");
+                            double Mult9 = double.Parse(Console.ReadLine());
+                            double ResMult3 = Mult6 * Mult7 * Mult8 * Mult9;
+                            Console.WriteLine("O resultado de " + Mult6 + " * " + Mult7 + " * " + Mult8 + " * " + Mult8 + " é: " + ResMult3.ToString(CultureInfo.InvariantCulture));
+                            break;
+                        case 5:
+                            Console.WriteLine("Voce selecionou 5 numeros! ");
+                            Console.Write("Digite o primero numero: ");
+                            double Sub10 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o segundo numero: ");
+                            double Sub11 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o terceiro numero: ");
+                            double Sub12 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o quarto numero: ");
+                            double Sub13 = double.Parse(Console.ReadLine());
+                            Console.Write("Digite o quinto numero: ");
+                            double Sub14 = double.Parse(Console.ReadLine());
+                            double ResSub4 = Sub10 * Sub11 * Sub12 * Sub13 * Sub14;
+                            Console.WriteLine("O resultado de " + Sub10 + " * " + Sub11 + " * " + Sub12 + " * " + Sub13 + " * " + Sub14 + " é: " + ResSub4.ToString(CultureInfo.InvariantCulture));
+                            break;
+                        default:
+                            Console.WriteLine("Numero invalido");
+                            break;
+                    }
                     break;
+
+                //DIVISÃO
                 case 4:
                     Console.WriteLine("Voce selecionou a operação de Divisão, Cuidado pois 0 não é divisivel");
                     Console.Write("Digite o primeiro numero: ");
@@ -75,6 +233,8 @@ namespace Exercicio18OOP
                         Console.WriteLine("O resultado da divisão é: " + Divisao.ToString(CultureInfo.InvariantCulture));
                     }
                     break;
+
+                //MOD
                 case 5:
                     Console.WriteLine("Você selecionou a operação de Resto de Divisão ");
                     Console.Write("Digite o primeiro numero: ");
@@ -106,33 +266,186 @@ namespace Exercicio18OOP
                 double OperacaoSelecionada2 = double.Parse(Console.ReadLine());
                 switch (OperacaoSelecionada2)
                 {
+                    //ADIÇÃO
                     case 1:
-                        Console.WriteLine("Voce Selecionou a operação Adição ");
-                        Console.Write("Selecione o primeiro numero para a adição: ");
-                        double Adc1 = double.Parse(Console.ReadLine());
-                        Console.Write("Selecione o segundo numero para a adição: ");
-                        double Adc2 = double.Parse(Console.ReadLine());
-                        double Soma2 = Adc1 + Adc2;
-                        Console.WriteLine("O resultado da adição é: " + Soma2);
-                        break;
-                    case 2:
-                        Console.WriteLine("Você selecionou a operação Subtração: ");
-                        Console.Write("Selecione o primeiro numero para a subtração: ");
-                        double Sub1 = double.Parse(Console.ReadLine());
-                        Console.Write("Selecione o segundo numero para a subtração ");
-                        double Sub2 = double.Parse(Console.ReadLine());
-                        double Subtracao = Sub1 - Sub2;
-                        Console.WriteLine("O resultado da subtração é: " + Subtracao);
-                        break;
-                    case 3:
-                        Console.WriteLine("Você selecionou a operação Multiplicação: ");
-                        Console.Write("Digite o primeiro numero para a Multiplicação ");
-                        double Multi1 = double.Parse(Console.ReadLine());
-                        Console.Write("Digite o segundo numero para a multiplicação ");
-                        double Multi2 = double.Parse(Console.ReadLine());
-                        double Multipli = Multi1 * Multi2;
-                        Console.WriteLine("O resultado da multiplicação é: " + Multipli);
 
+                        Console.WriteLine("Voce selecionou a operação adição");
+                        Console.WriteLine("Quantos numeros voce deseja somar? de 2 até 5");
+                        int QuantidadeSoma = int.Parse(Console.ReadLine());
+                        switch (QuantidadeSoma)
+                        {
+                            case 2:
+                                Console.WriteLine("Voce selecionou 2 numeros! ");
+                                Console.Write("Digite o primeiro numero: ");
+                                double Soma1 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o segundo numero: ");
+                                double Soma2 = double.Parse(Console.ReadLine());
+                                double Resultado1 = Soma1 + Soma2;
+                                Console.WriteLine("O resultado de " + Soma1 + " e " + Soma2 + " é : " + Resultado1.ToString(CultureInfo.InvariantCulture));
+                                break;
+                            case 3:
+                                Console.WriteLine("Voce selecionou 3 numeros! ");
+                                Console.Write("Digite o primeiro numero: ");
+                                double Soma3 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o segundo numero: ");
+                                double Soma4 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o terceiro numero: ");
+                                double Soma5 = double.Parse(Console.ReadLine());
+                                double Resultado2 = Soma3 + Soma4 + Soma5;
+                                Console.WriteLine("O resultado de " + Soma3 + " + " + Soma4 + " + " + Soma5 + " é: " + Resultado2.ToString(CultureInfo.InvariantCulture));
+                                break;
+                            case 4:
+                                Console.WriteLine("Voce selecionou 4 numeros! ");
+                                Console.Write("Digite o primeiro numero: ");
+                                double Soma6 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o segundo numero: ");
+                                double Soma7 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o terceiro numero: ");
+                                double Soma8 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o quarto numero: ");
+                                double Soma9 = double.Parse(Console.ReadLine());
+                                double Resultado3 = Soma6 + Soma7 + Soma8 + Soma9;
+                                Console.WriteLine("O resultado de " + Soma6 + " + " + Soma7 + " + " + Soma8 + " + " + Soma9 + " é: " + Resultado3.ToString(CultureInfo.InvariantCulture));
+                                break;
+                            case 5:
+                                Console.WriteLine("Voce selecionou 5 numeros! ");
+                                Console.Write("Digite o primero numero: ");
+                                double Soma10 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o segundo numero: ");
+                                double Soma11 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o terceiro numero: ");
+                                double Soma12 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o quarto numero: ");
+                                double Soma13 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o quinto numero: ");
+                                double Soma14 = double.Parse(Console.ReadLine());
+                                double Resultado4 = Soma10 + Soma11 + Soma12 + Soma13 + Soma14;
+                                Console.WriteLine("O resultado de " + Soma10 + " + " + Soma11 + " + " + Soma12 + " + " + Soma13 + " + " + Soma14 + " é: " + Resultado4.ToString(CultureInfo.InvariantCulture));
+                                break;
+                            default:
+                                Console.WriteLine("Numero invalido");
+                                break;
+                        }
+                        break;
+                    //SUBTRAÇÃO
+                    case 2:
+                        Console.WriteLine("Voce selecionou  a operaçao subtração ");
+                        Console.WriteLine("Quantos numeros voce deseja subtrair? de 2 ate 5! ");
+                        int QuantidadeSubtracao = int.Parse(Console.ReadLine());
+                        switch (QuantidadeSubtracao)
+                        {
+                            case 2:
+                                Console.WriteLine("Voce selecionou 2 numeros! ");
+                                Console.Write("Digite o primeiro numero: ");
+                                double Sub1 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o segundo numero: ");
+                                double Sub2 = double.Parse(Console.ReadLine());
+                                double ResSub1 = Sub1 - Sub2;
+                                Console.WriteLine("O resultado de " + Sub1 + " e " + Sub2 + " é : " + ResSub1.ToString(CultureInfo.InvariantCulture));
+                                break;
+                            case 3:
+                                Console.WriteLine("Voce selecionou 3 numeros! ");
+                                Console.Write("Digite o primeiro numero: ");
+                                double Sub3 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o segundo numero: ");
+                                double Sub4 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o terceiro numero: ");
+                                double Sub5 = double.Parse(Console.ReadLine());
+                                double ResSub2 = Sub3 - Sub4 - Sub5;
+                                Console.WriteLine("O resultado de " + Sub3 + " - " + Sub4 + " - " + Sub5 + " é: " + ResSub2.ToString(CultureInfo.InvariantCulture));
+                                break;
+                            case 4:
+                                Console.WriteLine("Voce selecionou 4 numeros! ");
+                                Console.Write("Digite o primeiro numero: ");
+                                double Sub6 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o segundo numero: ");
+                                double Sub7 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o terceiro numero: ");
+                                double Sub8 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o quarto numero: ");
+                                double Sub9 = double.Parse(Console.ReadLine());
+                                double ResSub3 = Sub6 - Sub7 - Sub8 - Sub9;
+                                Console.WriteLine("O resultado de " + Sub6 + " - " + Sub7 + " - " + Sub8 + " - " + Sub9 + " é: " + ResSub3.ToString(CultureInfo.InvariantCulture));
+                                break;
+                            case 5:
+                                Console.WriteLine("Voce selecionou 5 numeros! ");
+                                Console.Write("Digite o primero numero: ");
+                                double Sub10 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o segundo numero: ");
+                                double Sub11 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o terceiro numero: ");
+                                double Sub12 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o quarto numero: ");
+                                double Sub13 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o quinto numero: ");
+                                double Sub14 = double.Parse(Console.ReadLine());
+                                double ResSub4 = Sub10 - Sub11 - Sub12 - Sub13 - Sub14;
+                                Console.WriteLine("O resultado de " + Sub10 + " - " + Sub11 + " - " + Sub12 + " - " + Sub13 + " - " + Sub14 + " é: " + ResSub4.ToString(CultureInfo.InvariantCulture));
+                                break;
+                            default:
+                                Console.WriteLine("Numero invalido");
+                                break;
+                        }
+                        break;
+                    //MULTIPLICAÇÃO
+                    case 3:
+                        Console.WriteLine("Voce selecionou  a operaçao multiplicãção ");
+                        Console.WriteLine("Quantos numeros voce deseja multiplicar? de 2 ate 5! ");
+                        int QuantidadeMulti = int.Parse(Console.ReadLine());
+                        switch (QuantidadeMulti)
+                        {
+                            case 2:
+                                Console.WriteLine("Voce selecionou 2 numeros! ");
+                                Console.Write("Digite o primeiro numero: ");
+                                double Mult1 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o segundo numero: ");
+                                double Mult2 = double.Parse(Console.ReadLine());
+                                double ResMult1 = Mult1 * Mult2;
+                                Console.WriteLine("O resultado de " + Mult1 + " e " + Mult2 + " é : " + ResMult1.ToString(CultureInfo.InvariantCulture));
+                                break;
+                            case 3:
+                                Console.WriteLine("Voce selecionou 3 numeros! ");
+                                Console.Write("Digite o primeiro numero: ");
+                                double Mult3 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o segundo numero: ");
+                                double Mult4 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o terceiro numero: ");
+                                double Mult5 = double.Parse(Console.ReadLine());
+                                double ResMult2 = Mult3 * Mult4 * Mult5;
+                                Console.WriteLine("O resultado de " + Mult3 + " * " + Mult4 + " * " + Mult5 + " é: " + ResMult2.ToString(CultureInfo.InvariantCulture));
+                                break;
+                            case 4:
+                                Console.WriteLine("Voce selecionou 4 numeros! ");
+                                Console.Write("Digite o primeiro numero: ");
+                                double Mult6 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o segundo numero: ");
+                                double Mult7 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o terceiro numero: ");
+                                double Mult8 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o quarto numero: ");
+                                double Mult9 = double.Parse(Console.ReadLine());
+                                double ResMult3 = Mult6 * Mult7 * Mult8 * Mult9;
+                                Console.WriteLine("O resultado de " + Mult6 + " * " + Mult7 + " * " + Mult8 + " * " + Mult8 + " é: " + ResMult3.ToString(CultureInfo.InvariantCulture));
+                                break;
+                            case 5:
+                                Console.WriteLine("Voce selecionou 5 numeros! ");
+                                Console.Write("Digite o primero numero: ");
+                                double Sub10 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o segundo numero: ");
+                                double Sub11 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o terceiro numero: ");
+                                double Sub12 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o quarto numero: ");
+                                double Sub13 = double.Parse(Console.ReadLine());
+                                Console.Write("Digite o quinto numero: ");
+                                double Sub14 = double.Parse(Console.ReadLine());
+                                double ResSub4 = Sub10 * Sub11 * Sub12 * Sub13 * Sub14;
+                                Console.WriteLine("O resultado de " + Sub10 + " * " + Sub11 + " * " + Sub12 + " * " + Sub13 + " * " + Sub14 + " é: " + ResSub4.ToString(CultureInfo.InvariantCulture));
+                                break;
+                            default:
+                                Console.WriteLine("Numero invalido");
+                                break;
+                        }
                         break;
                     case 4:
                         Console.WriteLine("Você selecionou a operação Divisão: ");
@@ -189,7 +502,7 @@ namespace Exercicio18OOP
                     resultado = resultado * numero;
                     numero = numero - 1;
                 }
-                Console.WriteLine("Fatorial de " + numero + " é " + resultado);
+                Console.WriteLine("Fatorial de " + numero + " é " + resultado.ToString(CultureInfo.InvariantCulture));
 
             }
             else if (SelecaoFatorial == "NAO" || SelecaoFatorial == "nao" || SelecaoFatorial == "nao" || SelecaoFatorial == "Nao")
@@ -246,6 +559,10 @@ namespace Exercicio18OOP
                 }
 
                 Console.WriteLine("O MDC dos números " + Mda1 + " e " + Mda2 + " é " + Mda1);
+
+
+
+
             }
             else if (OperacaoMDC == "NAO" || OperacaoMDC == "nao" || OperacaoMDC == "Nao" || OperacaoMDC == "n")
             {
@@ -256,6 +573,8 @@ namespace Exercicio18OOP
                 Console.WriteLine("Operação invalida ");
             }
         }
+
+        //MMC (Minimo Multiplo Comum)
 
 
 
@@ -304,11 +623,11 @@ namespace Exercicio18OOP
 
                         if (Mediana >= MediaAprovacao)
                         {
-                            Console.WriteLine("Parabens! você foi aprovado com a média: " + Mediana,"F2".ToString(CultureInfo.InvariantCulture));
+                            Console.WriteLine("Parabens! você foi aprovado com a média: " + Mediana, "F2".ToString(CultureInfo.InvariantCulture));
                         }
                         else if (Mediana <= MediaAprovacao)
                         {
-                            Console.WriteLine("Infelizmente você foi reprovado com a média: " + Mediana,"F2".ToString(CultureInfo.InvariantCulture));
+                            Console.WriteLine("Infelizmente você foi reprovado com a média: " + Mediana, "F2".ToString(CultureInfo.InvariantCulture));
                         }
                         break;
                     case 4:
@@ -323,14 +642,14 @@ namespace Exercicio18OOP
                         double MEDI = (Nota6 + Nota7 + Nota8 + Nota9) / 4;
                         if (MEDI >= MediaAprovacao)
                         {
-                            Console.WriteLine("Parabens! você foi aprovado com a média: " + MEDI,"F2".ToString(CultureInfo.InvariantCulture));
+                            Console.WriteLine("Parabens! você foi aprovado com a média: " + MEDI, "F2".ToString(CultureInfo.InvariantCulture));
                         }
                         else if (MEDI <= MediaAprovacao)
                         {
-                            Console.WriteLine("Infelizmente você foi reprovado com a média: " + MEDI,"F2".ToString(CultureInfo.InvariantCulture));
+                            Console.WriteLine("Infelizmente você foi reprovado com a média: " + MEDI, "F2".ToString(CultureInfo.InvariantCulture));
                         }
                         break;
-                       
+
                 }
             }
             else if (OperacaoNota == "Nao" || OperacaoNota == "NAO" || OperacaoNota == "nao" || OperacaoNota == "n")
